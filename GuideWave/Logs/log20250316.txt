@@ -1,0 +1,653 @@
+2025-03-16 02:15:21.988 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-16 02:15:22.079 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-16 02:15:22.089 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 02:15:22.091 +05:30 [INF] Hosting environment: Development
+2025-03-16 02:15:22.093 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-16 02:15:24.894 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger - null null
+2025-03-16 02:15:25.226 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger - 301 0 null 342.9294ms
+2025-03-16 02:15:25.248 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-16 02:15:25.436 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 187.5153ms
+2025-03-16 02:15:25.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/swagger-ui.css - null null
+2025-03-16 02:15:25.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/swagger-ui-bundle.js - null null
+2025-03-16 02:15:25.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-16 02:15:25.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:15:25.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 33.0112ms
+2025-03-16 02:15:25.560 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-03-16 02:15:25.560 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-16 02:15:25.563 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/swagger-ui.css - 200 143943 text/css 80.6146ms
+2025-03-16 02:15:25.565 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 77.575ms
+2025-03-16 02:15:25.571 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:15:25.579 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-16 02:15:25.582 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 94.4343ms
+2025-03-16 02:15:25.663 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.0221ms
+2025-03-16 02:15:25.921 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-16 02:15:25.983 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/favicon-32x32.png - null null
+2025-03-16 02:15:25.986 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-03-16 02:15:25.988 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/favicon-32x32.png - 200 628 image/png 4.4227ms
+2025-03-16 02:15:26.079 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.6251ms
+2025-03-16 02:15:34.757 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 191
+2025-03-16 02:15:34.768 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:15:34.776 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:15:34.810 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:15:34.822 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 6.2678ms
+2025-03-16 02:15:34.824 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:15:34.827 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:15:34.900 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 143.5661ms
+2025-03-16 02:17:08.688 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:17:08.730 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:17:08.747 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 65.9196ms
+2025-03-16 02:17:08.752 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:17:08.762 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:17:08.769 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:17:08.787 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:17:08.795 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 6.3823ms
+2025-03-16 02:17:08.798 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:17:08.806 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:17:08.848 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 96.6902ms
+2025-03-16 02:17:31.971 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:17:31.976 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:17:31.978 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 8.3132ms
+2025-03-16 02:17:31.982 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:17:31.986 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:17:31.988 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:17:31.989 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:17:31.992 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 0.8795ms
+2025-03-16 02:17:31.993 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:17:31.997 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:17:32.007 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 25.3152ms
+2025-03-16 02:17:37.510 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/api/Guide - null null
+2025-03-16 02:17:37.588 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.GetAll (GuideWave)'
+2025-03-16 02:17:37.621 +05:30 [INF] Route matched with {action = "GetAll", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GuideWave.DTO.Guides.GuidesDto]]] GetAll() on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:17:37.623 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.GetAll (GuideWave) in 0.4318ms
+2025-03-16 02:17:37.623 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.GetAll (GuideWave)'
+2025-03-16 02:17:37.624 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method18(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:17:37.755 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/api/Guide - 500 null text/html; charset=utf-8 245.1638ms
+2025-03-16 02:17:37.785 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:17:37.786 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:17:37.789 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.4487ms
+2025-03-16 02:17:37.813 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.7192ms
+2025-03-16 02:17:37.843 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/favicon.ico - null null
+2025-03-16 02:17:37.846 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/favicon.ico - 404 0 null 3.2542ms
+2025-03-16 02:17:37.851 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7015/favicon.ico, Response status code: 404
+2025-03-16 02:20:10.615 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:20:10.625 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:20:10.626 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 11.6145ms
+2025-03-16 02:20:10.628 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:20:10.631 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:20:10.633 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:20:10.634 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:20:10.636 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 0.8969ms
+2025-03-16 02:20:10.637 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:20:10.639 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:20:10.644 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 16.3722ms
+2025-03-16 02:21:00.574 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:21:00.580 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:21:00.581 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 6.6029ms
+2025-03-16 02:21:00.583 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:21:00.586 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:21:00.587 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:21:00.589 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:21:00.592 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 0.9968ms
+2025-03-16 02:21:00.593 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:21:00.595 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:21:00.599 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 16.1204ms
+2025-03-16 02:23:11.005 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:23:11.013 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:23:11.016 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 11.9727ms
+2025-03-16 02:23:11.022 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:23:11.024 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:23:11.028 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:23:11.033 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:23:11.041 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 6.6637ms
+2025-03-16 02:23:11.042 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:23:11.044 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:23:11.059 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 36.6123ms
+2025-03-16 02:23:18.202 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:23:18.218 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:23:18.219 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 18.0729ms
+2025-03-16 02:23:18.222 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:23:18.226 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:23:18.227 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:23:18.229 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:23:18.232 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 0.7556ms
+2025-03-16 02:23:18.234 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:23:18.237 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:23:18.243 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 500 null text/plain; charset=utf-8 21.374ms
+2025-03-16 02:23:20.294 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/api/Guide - null null
+2025-03-16 02:23:20.337 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.GetAll (GuideWave)'
+2025-03-16 02:23:20.337 +05:30 [INF] Route matched with {action = "GetAll", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GuideWave.DTO.Guides.GuidesDto]]] GetAll() on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:23:20.339 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.GetAll (GuideWave) in 0.3776ms
+2025-03-16 02:23:20.339 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.GetAll (GuideWave)'
+2025-03-16 02:23:20.340 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GuideWave.Repository.IRepository.IGuideRepository' while attempting to activate 'GuideWave.Controllers.GuideController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method18(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-16 02:23:20.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/api/Guide - 500 null text/html; charset=utf-8 64.6391ms
+2025-03-16 02:23:20.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:23:20.387 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:23:20.389 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.5778ms
+2025-03-16 02:23:20.411 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.7036ms
+2025-03-16 02:26:41.689 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-16 02:26:41.744 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-16 02:26:41.750 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 02:26:41.754 +05:30 [INF] Hosting environment: Development
+2025-03-16 02:26:41.754 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-16 02:26:44.322 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-16 02:26:44.621 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 306.3657ms
+2025-03-16 02:26:44.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:26:44.636 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:26:44.640 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 9.7333ms
+2025-03-16 02:26:44.678 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.9243ms
+2025-03-16 02:26:44.813 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-16 02:26:44.957 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 144.4369ms
+2025-03-16 02:26:48.610 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:26:48.620 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:26:48.622 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 12.1587ms
+2025-03-16 02:26:48.625 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 268
+2025-03-16 02:26:48.629 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:26:48.633 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:26:48.675 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:26:52.096 +05:30 [INF] Executed DbCommand (183ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:26:52.429 +05:30 [INF] Executed DbCommand (156ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Guides] ([Email], [Experience], [FullName], [Location], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-16 02:26:52.467 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Guide'.
+2025-03-16 02:26:52.495 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 3813.0058ms
+2025-03-16 02:26:52.496 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:26:52.505 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 201 null application/json; charset=utf-8 3879.3485ms
+2025-03-16 02:28:30.436 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 164
+2025-03-16 02:28:30.445 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:28:30.447 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:28:30.460 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-16 02:28:30.603 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:28:31.039 +05:30 [INF] Executed DbCommand (397ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tourists] ([Country], [Email], [FullName], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-16 02:28:31.046 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Tourists'.
+2025-03-16 02:28:31.051 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 587.2939ms
+2025-03-16 02:28:31.053 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:28:31.055 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 201 null application/json; charset=utf-8 618.84ms
+2025-03-16 02:30:13.783 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists - null null
+2025-03-16 02:30:13.798 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:30:13.804 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists - 204 null null 22.4867ms
+2025-03-16 02:30:13.807 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 227
+2025-03-16 02:30:13.811 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:30:13.815 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:30:13.828 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-16 02:30:13.974 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:30:14.014 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tourists] ([Country], [Email], [FullName], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-16 02:30:14.018 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Tourists'.
+2025-03-16 02:30:14.024 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 193.5874ms
+2025-03-16 02:30:14.025 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:30:14.028 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 201 null application/json; charset=utf-8 221.7755ms
+2025-03-16 02:38:18.326 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-16 02:38:18.389 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-16 02:38:18.394 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 02:38:18.396 +05:30 [INF] Hosting environment: Development
+2025-03-16 02:38:18.397 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-16 02:38:20.339 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-16 02:38:20.671 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 341.3143ms
+2025-03-16 02:38:20.699 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:38:20.702 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:38:20.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 20.5604ms
+2025-03-16 02:38:20.765 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.954ms
+2025-03-16 02:38:20.861 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-16 02:38:21.042 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 180.8621ms
+2025-03-16 02:39:05.318 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:39:05.334 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:39:05.338 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 22.434ms
+2025-03-16 02:39:05.342 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 251
+2025-03-16 02:39:05.347 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:39:05.355 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:39:05.400 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:39:07.390 +05:30 [INF] Executed DbCommand (191ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:39:07.714 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Guides] ([Email], [Experience], [FullName], [Location], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-16 02:39:07.760 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Guide'.
+2025-03-16 02:39:07.799 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 2393.0106ms
+2025-03-16 02:39:07.801 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:39:07.813 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 201 null application/json; charset=utf-8 2470.5196ms
+2025-03-16 02:43:57.006 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-16 02:43:57.117 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-16 02:43:57.134 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 02:43:57.137 +05:30 [INF] Hosting environment: Development
+2025-03-16 02:43:57.139 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-16 02:44:00.844 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-16 02:44:02.896 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 2068.7418ms
+2025-03-16 02:44:02.955 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:44:02.955 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:44:02.982 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 26.968ms
+2025-03-16 02:44:03.035 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.0013ms
+2025-03-16 02:44:03.137 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-16 02:44:03.312 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 175.6558ms
+2025-03-16 02:44:19.795 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:44:19.809 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:44:19.813 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 18.4808ms
+2025-03-16 02:44:19.816 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:44:19.821 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:44:19.828 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:44:19.874 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:44:21.489 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:44:21.512 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:44:21.517 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 1637.868ms
+2025-03-16 02:44:21.517 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:44:21.527 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 1711.2678ms
+2025-03-16 02:44:31.213 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:44:31.217 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:44:31.219 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 6.6615ms
+2025-03-16 02:44:31.222 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:44:31.228 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:44:31.230 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:44:31.231 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:44:31.298 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:44:31.300 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:44:31.301 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 68.3556ms
+2025-03-16 02:44:31.302 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:44:31.303 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 80.7732ms
+2025-03-16 02:45:53.186 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:45:53.210 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:45:53.216 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 32.1424ms
+2025-03-16 02:45:53.219 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:45:53.224 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:45:53.227 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:45:53.237 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:45:53.458 +05:30 [INF] Executed DbCommand (102ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:45:53.467 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:45:53.469 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 230.3452ms
+2025-03-16 02:45:53.470 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:45:53.470 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 251.7541ms
+2025-03-16 02:46:02.123 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:46:02.132 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:46:02.133 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 9.8855ms
+2025-03-16 02:46:02.138 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:46:02.140 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:46:02.142 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:46:02.143 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:46:02.158 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:46:02.161 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:46:02.163 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 17.8331ms
+2025-03-16 02:46:02.164 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:46:02.166 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 27.8531ms
+2025-03-16 02:46:47.691 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:46:47.729 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:46:47.745 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 58.9931ms
+2025-03-16 02:46:47.745 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:46:47.756 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:46:47.767 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:46:47.794 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:46:48.024 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:46:48.031 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:46:48.035 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 237.9963ms
+2025-03-16 02:46:48.036 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:46:48.038 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 296.2512ms
+2025-03-16 02:48:02.894 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:48:03.006 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:48:03.052 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 177.8935ms
+2025-03-16 02:48:03.067 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:48:03.116 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:48:03.139 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:48:03.165 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:48:03.751 +05:30 [INF] Executed DbCommand (188ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:48:03.768 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:48:03.776 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 605.6397ms
+2025-03-16 02:48:03.778 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:48:03.784 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 717.4082ms
+2025-03-16 02:48:24.984 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Guide - null null
+2025-03-16 02:48:24.992 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:48:24.993 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Guide - 204 null null 9.8163ms
+2025-03-16 02:48:24.996 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Guide - application/json 263
+2025-03-16 02:48:25.002 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:48:25.003 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:48:25.004 +05:30 [INF] Route matched with {action = "Create", controller = "Guide"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Guides.CreateGuidesDto]] Create(GuideWave.DTO.Guides.CreateGuidesDto) on controller GuideWave.Controllers.GuideController (GuideWave).
+2025-03-16 02:48:25.017 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__createguidesDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Guides] AS [g]
+        WHERE [g].[Email] = @__createguidesDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:48:25.019 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:48:25.020 +05:30 [INF] Executed action GuideWave.Controllers.GuideController.Create (GuideWave) in 15.2303ms
+2025-03-16 02:48:25.020 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.GuideController.Create (GuideWave)'
+2025-03-16 02:48:25.021 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Guide - 409 null text/plain; charset=utf-8 26.1523ms
+2025-03-16 02:50:40.071 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-16 02:50:40.130 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-16 02:50:40.134 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 02:50:40.135 +05:30 [INF] Hosting environment: Development
+2025-03-16 02:50:40.135 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-16 02:50:40.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-16 02:50:40.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 304.9848ms
+2025-03-16 02:50:40.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:50:40.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:50:40.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 19.4022ms
+2025-03-16 02:50:40.929 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.8223ms
+2025-03-16 02:50:40.966 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-16 02:50:41.130 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 163.7746ms
+2025-03-16 02:50:46.583 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists - null null
+2025-03-16 02:50:46.595 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:50:46.599 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists - 204 null null 15.3646ms
+2025-03-16 02:50:46.602 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 229
+2025-03-16 02:50:46.608 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:50:46.615 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:50:46.652 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-16 02:50:48.345 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:50:48.697 +05:30 [INF] Executed DbCommand (74ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tourists] ([Country], [Email], [FullName], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-16 02:50:48.732 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Tourists'.
+2025-03-16 02:50:48.762 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 2105.0263ms
+2025-03-16 02:50:48.764 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:50:48.775 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 201 null application/json; charset=utf-8 2172.4663ms
+2025-03-16 02:50:56.375 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists - null null
+2025-03-16 02:50:56.378 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:50:56.379 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists - 204 null null 4.7945ms
+2025-03-16 02:50:56.381 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 229
+2025-03-16 02:50:56.384 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:50:56.385 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:50:56.386 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-16 02:50:56.462 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:50:56.465 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:50:56.467 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 78.5154ms
+2025-03-16 02:50:56.468 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:50:56.469 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 409 null text/plain; charset=utf-8 88.3329ms
+2025-03-16 02:52:10.735 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-16 02:52:10.827 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-16 02:52:10.834 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 02:52:10.836 +05:30 [INF] Hosting environment: Development
+2025-03-16 02:52:10.837 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-16 02:52:11.833 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-16 02:52:12.311 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 490.5679ms
+2025-03-16 02:52:12.364 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 02:52:12.364 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-16 02:52:12.379 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 15.8544ms
+2025-03-16 02:52:12.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.4139ms
+2025-03-16 02:52:12.514 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-16 02:52:12.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 217.6083ms
+2025-03-16 02:52:15.148 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists - null null
+2025-03-16 02:52:15.165 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:52:15.169 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists - 204 null null 21.3664ms
+2025-03-16 02:52:15.173 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 229
+2025-03-16 02:52:15.178 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:52:15.186 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:52:15.235 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-16 02:52:17.112 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:52:17.148 +05:30 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2025-03-16 02:52:17.154 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 1913.9775ms
+2025-03-16 02:52:17.155 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:52:17.167 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 409 null text/plain; charset=utf-8 1993.6145ms
+2025-03-16 02:52:23.730 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists - null null
+2025-03-16 02:52:23.735 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:52:23.737 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists - 204 null null 6.9487ms
+2025-03-16 02:52:23.741 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 229
+2025-03-16 02:52:23.750 +05:30 [INF] CORS policy execution successful.
+2025-03-16 02:52:23.752 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:52:23.755 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-16 02:52:23.831 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-16 02:52:24.146 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tourists] ([Country], [Email], [FullName], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-16 02:52:24.193 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Tourists'.
+2025-03-16 02:52:24.224 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 464.2712ms
+2025-03-16 02:52:24.227 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-16 02:52:24.229 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 201 null application/json; charset=utf-8 489.7728ms

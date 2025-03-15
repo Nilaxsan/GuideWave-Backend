@@ -31,6 +31,11 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 #region Configure Repository
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
+builder.Services.AddTransient<ITouristsRepository, TouristsRepository>();
+builder.Services.AddTransient<IGuideRepository, GuideRepository>();
+builder.Services.AddTransient<IPlaceRepository, PlaceRepository>();
+
+
 
 #endregion
 

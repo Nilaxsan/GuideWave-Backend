@@ -182,3 +182,5 @@ G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWa
 G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\obj\Debug\net8.0\GuideWave.pdb
 G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\obj\Debug\net8.0\GuideWave.genruntimeconfig.cache
 G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\obj\Debug\net8.0\ref\GuideWave.dll
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\obj\Debug\net8.0\GuideWave.sourcelink.json
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\BCrypt.Net-Next.dll

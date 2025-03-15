@@ -4,7 +4,9 @@ using GuideWave.DTO.Tourists;
 using GuideWave.Models;
 using GuideWave.Repository.IRepository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace GuideWave.Controllers
 {
@@ -70,11 +72,13 @@ namespace GuideWave.Controllers
             if (result)
             {
 
-                return Conflict("Tourist with this email already exists in database");
+                return Conflict("Tourist with this email already exists ");
             }
 
 
             var tourist = _mapper.Map<Tourists>(createtouristsDto);
+            var passwordHasher = new PasswordHasher<Tourists>();
+            tourist.Password = passwordHasher.HashPassword(tourist, createtouristsDto.Password);
 
 
             await _touristsRepository.Create(tourist);

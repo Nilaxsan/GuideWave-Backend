@@ -4,6 +4,7 @@ using GuideWave.Models;
 using GuideWave.Repository;
 using GuideWave.Repository.IRepository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GuideWave.Controllers
@@ -70,12 +71,13 @@ namespace GuideWave.Controllers
             if (result)
             {
 
-                return Conflict("State already exists in database");
+                return Conflict("Guide with this Email already exists");
             }
 
 
             var guide = _mapper.Map<Guide>(createguidesDto);
-
+            var passwordHasher = new PasswordHasher<Guide>();
+            guide.Password = passwordHasher.HashPassword(guide, createguidesDto.Password);
 
             await _guidesRepository.Create(guide);
             return CreatedAtAction("GetById", new { id = guide.UserId }, guide);
