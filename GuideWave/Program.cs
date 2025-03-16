@@ -4,6 +4,8 @@ using GuideWave.Repository.IRepository;
 using GuideWave.Repository;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using GuideWave.Services.EmailService;
+using GuideWave.Services.JWTService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,12 +30,20 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 #endregion
 
+#region
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+
+#endregion
+
 #region Configure Repository
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
 builder.Services.AddTransient<ITouristsRepository, TouristsRepository>();
 builder.Services.AddTransient<IGuideRepository, GuideRepository>();
 builder.Services.AddTransient<IPlaceRepository, PlaceRepository>();
+builder.Services.AddTransient<IAuthRepository, AuthRepository>();
+
 
 
 

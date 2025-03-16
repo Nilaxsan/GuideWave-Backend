@@ -14,6 +14,9 @@ namespace GuideWave.Models
         public string Experience { get; set; }
         public string Location { get; set; }
         public string Profile { get; set; }
+        public string Otp { get; set; }
+        public bool IsEmailVerified { get; set; } = false;
+        public string? EmailVerificationToken { get; set; }
 
     }
 }

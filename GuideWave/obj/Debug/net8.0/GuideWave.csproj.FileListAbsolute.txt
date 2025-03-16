@@ -184,3 +184,8 @@ G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWa
 G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\obj\Debug\net8.0\ref\GuideWave.dll
 G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\obj\Debug\net8.0\GuideWave.sourcelink.json
 G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\BCrypt.Net-Next.dll
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\MailKit.dll
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\MimeKit.dll
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
