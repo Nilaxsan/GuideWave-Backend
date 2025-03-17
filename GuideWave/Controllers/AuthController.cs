@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GuideWave.DTO.General;
 using GuideWave.Repository.IRepository;
 using GuideWave.Services.EmailService;
 using GuideWave.Services.JWTService;
@@ -17,7 +18,7 @@ namespace GuideWave.Controllers
             _authRepository = authRepository;
         }
         [HttpPost("forgot-password")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest fprequest)
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequestDto fprequest)
         {
 
 
@@ -34,6 +35,30 @@ namespace GuideWave.Controllers
                 return NotFound(new { message = ex.Message });
             }
 
+        }
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpRequestDto request)
+        {
+
+            var result = await _authRepository.VerifyOtpAsync(request.Otp);
+            if (result)
+            {
+                return Ok(new { message = "OTP verified successfully" });
+            }
+
+            return BadRequest(new { message = "Invalid OTP or user not found" });
+        }
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto request)
+        {
+
+            var result = await _authRepository.ResetPasswordAsync(request.NewPassword);
+            if (result)
+            {
+                return Ok(new { message = "Password reset successful" });
+            }
+
+            return BadRequest(new { message = "User not found or password reset failed" });
         }
 
     }

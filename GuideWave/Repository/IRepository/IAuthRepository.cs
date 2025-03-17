@@ -3,7 +3,7 @@
     public interface IAuthRepository
     {
         Task SendVerificationCodeAsync(string email);
-        //public Task<bool> VerifyOtpAsync(string verificationCode);
-        //public Task<bool> ResetPasswordAsync(string newPassword);
+        public Task<bool> VerifyOtpAsync(string verificationCode);
+        public Task<bool> ResetPasswordAsync(string newPassword);
     }
 }

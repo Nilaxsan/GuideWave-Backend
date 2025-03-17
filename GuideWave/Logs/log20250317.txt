@@ -122,3 +122,337 @@ WHERE [UserId] = @p10;
 2025-03-17 01:50:28.835 +05:30 [INF] Executed action GuideWave.Controllers.AuthController.ForgotPassword (GuideWave) in 6603.4995ms
 2025-03-17 01:50:28.839 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.AuthController.ForgotPassword (GuideWave)'
 2025-03-17 01:50:28.845 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Auth/forgot-password - 200 null application/json; charset=utf-8 6644.1412ms
+2025-03-17 15:33:00.896 +05:30 [INF] Now listening on: https://localhost:7015
+2025-03-17 15:33:00.953 +05:30 [INF] Now listening on: http://localhost:5283
+2025-03-17 15:33:00.958 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-17 15:33:00.960 +05:30 [INF] Hosting environment: Development
+2025-03-17 15:33:00.961 +05:30 [INF] Content root path: G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave
+2025-03-17 15:33:03.762 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-03-17 15:33:04.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 492.5044ms
+2025-03-17 15:33:04.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-17 15:33:04.252 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-03-17 15:33:04.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 12.1589ms
+2025-03-17 15:33:04.334 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.0304ms
+2025-03-17 15:33:04.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-03-17 15:33:04.576 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 201.6372ms
+2025-03-17 15:35:10.604 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists - null null
+2025-03-17 15:35:10.637 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:35:10.643 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists - 204 null null 39.6513ms
+2025-03-17 15:35:10.659 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists - application/json 238
+2025-03-17 15:35:10.673 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:35:10.687 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-17 15:35:10.769 +05:30 [INF] Route matched with {action = "Create", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Tourists.CreateTouristsDto]] Create(GuideWave.DTO.Tourists.CreateTouristsDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:35:16.710 +05:30 [INF] Executed DbCommand (274ms) [Parameters=[@__createtouristsDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tourists] AS [t]
+        WHERE [t].[Email] = @__createtouristsDto_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-17 15:35:25.248 +05:30 [INF] Executed DbCommand (127ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tourists] ([Country], [Email], [EmailVerificationToken], [FullName], [IsEmailVerified], [Otp], [Password], [PhoneNumber], [Profile], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-03-17 15:35:25.338 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Tourists'.
+2025-03-17 15:35:25.413 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Create (GuideWave) in 14634.8824ms
+2025-03-17 15:35:25.417 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Create (GuideWave)'
+2025-03-17 15:35:25.438 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists - 201 null application/json; charset=utf-8 14779.9223ms
+2025-03-17 15:35:36.155 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - null null
+2025-03-17 15:35:36.162 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:35:36.164 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - 204 null null 9.5736ms
+2025-03-17 15:35:36.168 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists/login - application/json 55
+2025-03-17 15:35:36.178 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:35:36.180 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:35:36.196 +05:30 [INF] Route matched with {action = "Login", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(GuideWave.DTO.General.LoginDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:35:36.469 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:35:36.495 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-17 15:35:36.497 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Login (GuideWave) in 297.3512ms
+2025-03-17 15:35:36.500 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:35:36.502 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists/login - 401 null text/plain; charset=utf-8 334.3294ms
+2025-03-17 15:35:56.684 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/api/Tourists/verify-email?token=2084427b-28e3-4528-93a1-80067b2a96b0&email=laxsannilaxsan5%40gmail.com - null null
+2025-03-17 15:35:56.716 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.VerifyEmail (GuideWave)'
+2025-03-17 15:35:56.727 +05:30 [INF] Route matched with {action = "VerifyEmail", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyEmail(System.String, System.String) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:35:56.795 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:35:57.005 +05:30 [INF] Executed DbCommand (188ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tourists] SET [Country] = @p0, [Email] = @p1, [EmailVerificationToken] = @p2, [FullName] = @p3, [IsEmailVerified] = @p4, [Otp] = @p5, [Password] = @p6, [PhoneNumber] = @p7, [Profile] = @p8, [Role] = @p9
+OUTPUT 1
+WHERE [UserId] = @p10;
+2025-03-17 15:35:57.014 +05:30 [INF] Executing RedirectResult, redirecting to http://localhost:3000/register-success.
+2025-03-17 15:35:57.016 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.VerifyEmail (GuideWave) in 285.3197ms
+2025-03-17 15:35:57.018 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.VerifyEmail (GuideWave)'
+2025-03-17 15:35:57.020 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/api/Tourists/verify-email?token=2084427b-28e3-4528-93a1-80067b2a96b0&email=laxsannilaxsan5%40gmail.com - 302 0 null 335.9947ms
+2025-03-17 15:36:14.964 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - null null
+2025-03-17 15:36:14.987 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:36:14.989 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - 204 null null 24.585ms
+2025-03-17 15:36:14.998 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists/login - application/json 55
+2025-03-17 15:36:15.001 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:36:15.002 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:36:15.004 +05:30 [INF] Route matched with {action = "Login", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(GuideWave.DTO.General.LoginDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:36:15.030 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:36:16.759 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-17 15:36:16.784 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Login (GuideWave) in 1777.1587ms
+2025-03-17 15:36:16.786 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:36:16.788 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists/login - 200 null application/json; charset=utf-8 1790.2282ms
+2025-03-17 15:36:36.941 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Auth/forgot-password - null null
+2025-03-17 15:36:36.946 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:36:36.949 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Auth/forgot-password - 204 null null 8.1848ms
+2025-03-17 15:36:36.952 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Auth/forgot-password - application/json 37
+2025-03-17 15:36:36.963 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:36:36.967 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.AuthController.ForgotPassword (GuideWave)'
+2025-03-17 15:36:36.976 +05:30 [INF] Route matched with {action = "ForgotPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgotPassword(GuideWave.DTO.General.ForgotPasswordRequestDto) on controller GuideWave.Controllers.AuthController (GuideWave).
+2025-03-17 15:36:37.068 +05:30 [INF] Executed DbCommand (54ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[UserId], [g].[Email], [g].[EmailVerificationToken], [g].[Experience], [g].[FullName], [g].[IsEmailVerified], [g].[Location], [g].[Otp], [g].[Password], [g].[PhoneNumber], [g].[Profile], [g].[Role]
+FROM [Guides] AS [g]
+WHERE [g].[Email] = @__email_0
+2025-03-17 15:36:37.078 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:36:37.096 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tourists] SET [Country] = @p0, [Email] = @p1, [EmailVerificationToken] = @p2, [FullName] = @p3, [IsEmailVerified] = @p4, [Otp] = @p5, [Password] = @p6, [PhoneNumber] = @p7, [Profile] = @p8, [Role] = @p9
+OUTPUT 1
+WHERE [UserId] = @p10;
+2025-03-17 15:36:42.347 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-17 15:36:42.353 +05:30 [INF] Executed action GuideWave.Controllers.AuthController.ForgotPassword (GuideWave) in 5373.0226ms
+2025-03-17 15:36:42.357 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.AuthController.ForgotPassword (GuideWave)'
+2025-03-17 15:36:42.359 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Auth/forgot-password - 200 null application/json; charset=utf-8 5407.7947ms
+2025-03-17 15:37:56.667 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Auth/verify-otp - null null
+2025-03-17 15:37:56.696 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:37:56.699 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Auth/verify-otp - 204 null null 32.7509ms
+2025-03-17 15:37:56.703 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Auth/verify-otp - application/json 16
+2025-03-17 15:37:56.711 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:37:56.713 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.AuthController.VerifyOtp (GuideWave)'
+2025-03-17 15:37:56.724 +05:30 [INF] Route matched with {action = "VerifyOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyOtp(GuideWave.DTO.General.VerifyOtpRequestDto) on controller GuideWave.Controllers.AuthController (GuideWave).
+2025-03-17 15:37:56.745 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[UserId], [g].[Email], [g].[EmailVerificationToken], [g].[Experience], [g].[FullName], [g].[IsEmailVerified], [g].[Location], [g].[Otp], [g].[Password], [g].[PhoneNumber], [g].[Profile], [g].[Role]
+FROM [Guides] AS [g]
+WHERE [g].[Email] = @__email_0
+2025-03-17 15:37:56.756 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:37:56.760 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-17 15:37:56.762 +05:30 [INF] Executed action GuideWave.Controllers.AuthController.VerifyOtp (GuideWave) in 35.3064ms
+2025-03-17 15:37:56.764 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.AuthController.VerifyOtp (GuideWave)'
+2025-03-17 15:37:56.765 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Auth/verify-otp - 200 null application/json; charset=utf-8 62.5345ms
+2025-03-17 15:38:26.127 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Auth/reset-password - null null
+2025-03-17 15:38:26.143 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:38:26.145 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Auth/reset-password - 204 null null 18.9404ms
+2025-03-17 15:38:26.148 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Auth/reset-password - application/json 19
+2025-03-17 15:38:26.154 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:38:26.156 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.AuthController.ResetPassword (GuideWave)'
+2025-03-17 15:38:26.169 +05:30 [INF] Route matched with {action = "ResetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPassword(GuideWave.DTO.General.ResetPasswordDto) on controller GuideWave.Controllers.AuthController (GuideWave).
+2025-03-17 15:38:26.188 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[UserId], [g].[Email], [g].[EmailVerificationToken], [g].[Experience], [g].[FullName], [g].[IsEmailVerified], [g].[Location], [g].[Otp], [g].[Password], [g].[PhoneNumber], [g].[Profile], [g].[Role]
+FROM [Guides] AS [g]
+WHERE [g].[Email] = @__email_0
+2025-03-17 15:38:26.196 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:38:26.495 +05:30 [INF] Executed action GuideWave.Controllers.AuthController.ResetPassword (GuideWave) in 321.6917ms
+2025-03-17 15:38:26.499 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.AuthController.ResetPassword (GuideWave)'
+2025-03-17 15:38:26.510 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'password')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.HashPassword(TUser user, String password)
+   at GuideWave.Repository.AuthRepository.ResetPasswordAsync(String newPassword) in G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\Repository\AuthRepository.cs:line 106
+   at GuideWave.Controllers.AuthController.ResetPassword(ResetPasswordDto request) in G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\Controllers\AuthController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-17 15:38:26.676 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Auth/reset-password - 500 null text/plain; charset=utf-8 528.487ms
+2025-03-17 15:38:34.822 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Auth/reset-password - null null
+2025-03-17 15:38:34.826 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:38:34.827 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Auth/reset-password - 204 null null 5.2072ms
+2025-03-17 15:38:34.830 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Auth/reset-password - application/json 19
+2025-03-17 15:38:34.834 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:38:34.836 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.AuthController.ResetPassword (GuideWave)'
+2025-03-17 15:38:34.837 +05:30 [INF] Route matched with {action = "ResetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPassword(GuideWave.DTO.General.ResetPasswordDto) on controller GuideWave.Controllers.AuthController (GuideWave).
+2025-03-17 15:38:34.847 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[UserId], [g].[Email], [g].[EmailVerificationToken], [g].[Experience], [g].[FullName], [g].[IsEmailVerified], [g].[Location], [g].[Otp], [g].[Password], [g].[PhoneNumber], [g].[Profile], [g].[Role]
+FROM [Guides] AS [g]
+WHERE [g].[Email] = @__email_0
+2025-03-17 15:38:34.868 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:38:34.979 +05:30 [INF] Executed action GuideWave.Controllers.AuthController.ResetPassword (GuideWave) in 139.9635ms
+2025-03-17 15:38:34.982 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.AuthController.ResetPassword (GuideWave)'
+2025-03-17 15:38:34.987 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'password')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.HashPassword(TUser user, String password)
+   at GuideWave.Repository.AuthRepository.ResetPasswordAsync(String newPassword) in G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\Repository\AuthRepository.cs:line 106
+   at GuideWave.Controllers.AuthController.ResetPassword(ResetPasswordDto request) in G:\Documents\Uni\Aaa\L3\Individual Project on Business Solution\Back_end\GuideWave\GuideWave\Controllers\AuthController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-17 15:38:35.005 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Auth/reset-password - 500 null text/plain; charset=utf-8 175.5907ms
+2025-03-17 15:39:51.648 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Auth/reset-password - null null
+2025-03-17 15:39:51.677 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:39:51.690 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Auth/reset-password - 204 null null 48.7829ms
+2025-03-17 15:39:51.692 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Auth/reset-password - application/json 22
+2025-03-17 15:39:51.701 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:39:51.709 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.AuthController.ResetPassword (GuideWave)'
+2025-03-17 15:39:51.719 +05:30 [INF] Route matched with {action = "ResetPassword", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPassword(GuideWave.DTO.General.ResetPasswordDto) on controller GuideWave.Controllers.AuthController (GuideWave).
+2025-03-17 15:39:51.857 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [g].[UserId], [g].[Email], [g].[EmailVerificationToken], [g].[Experience], [g].[FullName], [g].[IsEmailVerified], [g].[Location], [g].[Otp], [g].[Password], [g].[PhoneNumber], [g].[Profile], [g].[Role]
+FROM [Guides] AS [g]
+WHERE [g].[Email] = @__email_0
+2025-03-17 15:39:51.882 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:39:52.162 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Tourists] SET [Country] = @p0, [Email] = @p1, [EmailVerificationToken] = @p2, [FullName] = @p3, [IsEmailVerified] = @p4, [Otp] = @p5, [Password] = @p6, [PhoneNumber] = @p7, [Profile] = @p8, [Role] = @p9
+OUTPUT 1
+WHERE [UserId] = @p10;
+2025-03-17 15:39:52.171 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-17 15:39:52.177 +05:30 [INF] Executed action GuideWave.Controllers.AuthController.ResetPassword (GuideWave) in 454.8099ms
+2025-03-17 15:39:52.178 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.AuthController.ResetPassword (GuideWave)'
+2025-03-17 15:39:52.181 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Auth/reset-password - 200 null application/json; charset=utf-8 489.4482ms
+2025-03-17 15:40:07.548 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - null null
+2025-03-17 15:40:07.554 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:40:07.556 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - 204 null null 8.5198ms
+2025-03-17 15:40:07.560 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists/login - application/json 55
+2025-03-17 15:40:07.568 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:40:07.570 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:40:07.572 +05:30 [INF] Route matched with {action = "Login", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(GuideWave.DTO.General.LoginDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:40:07.586 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:40:07.804 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-03-17 15:40:07.807 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Login (GuideWave) in 232.2684ms
+2025-03-17 15:40:07.811 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:40:07.813 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists/login - 401 null text/plain; charset=utf-8 253.7059ms
+2025-03-17 15:40:16.072 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - null null
+2025-03-17 15:40:16.077 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:40:16.078 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7015/api/Tourists/login - 204 null null 7.0819ms
+2025-03-17 15:40:16.085 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Tourists/login - application/json 55
+2025-03-17 15:40:16.110 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:40:16.111 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:40:16.117 +05:30 [INF] Route matched with {action = "Login", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(GuideWave.DTO.General.LoginDto) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:40:16.130 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:40:16.399 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-17 15:40:16.402 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.Login (GuideWave) in 282.0899ms
+2025-03-17 15:40:16.403 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.Login (GuideWave)'
+2025-03-17 15:40:16.404 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Tourists/login - 200 null application/json; charset=utf-8 323.6787ms
+2025-03-17 15:50:09.898 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/api/Tourists/verify-email?token=2084427b-28e3-4528-93a1-80067b2a96b0&email=laxsannilaxsan5%40gmail.com - null null
+2025-03-17 15:50:09.952 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.TouristsController.VerifyEmail (GuideWave)'
+2025-03-17 15:50:09.957 +05:30 [INF] Route matched with {action = "VerifyEmail", controller = "Tourists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyEmail(System.String, System.String) on controller GuideWave.Controllers.TouristsController (GuideWave).
+2025-03-17 15:50:10.051 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[UserId], [t].[Country], [t].[Email], [t].[EmailVerificationToken], [t].[FullName], [t].[IsEmailVerified], [t].[Otp], [t].[Password], [t].[PhoneNumber], [t].[Profile], [t].[Role]
+FROM [Tourists] AS [t]
+WHERE [t].[Email] = @__email_0
+2025-03-17 15:50:10.066 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-03-17 15:50:10.068 +05:30 [INF] Executed action GuideWave.Controllers.TouristsController.VerifyEmail (GuideWave) in 110.849ms
+2025-03-17 15:50:10.069 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.TouristsController.VerifyEmail (GuideWave)'
+2025-03-17 15:50:10.070 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/api/Tourists/verify-email?token=2084427b-28e3-4528-93a1-80067b2a96b0&email=laxsannilaxsan5%40gmail.com - 400 null text/plain; charset=utf-8 174.4659ms
+2025-03-17 15:50:10.108 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/favicon.ico - null null
+2025-03-17 15:50:10.114 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/favicon.ico - 404 0 null 5.6296ms
+2025-03-17 15:50:10.119 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7015/favicon.ico, Response status code: 404
+2025-03-17 15:53:31.923 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Place - application/json 122
+2025-03-17 15:53:31.945 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:53:31.948 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.PlaceController.Create (GuideWave)'
+2025-03-17 15:53:32.010 +05:30 [INF] Route matched with {action = "Create", controller = "Place"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Places.CreatePlaceDto]] Create(GuideWave.DTO.Places.CreatePlaceDto) on controller GuideWave.Controllers.PlaceController (GuideWave).
+2025-03-17 15:53:32.157 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__createplaceDto_PlaceName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Places] AS [p]
+        WHERE [p].[PlaceName] = @__createplaceDto_PlaceName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-17 15:53:32.324 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Places] ([Availability], [Description], [ImageUrl], [PlaceName])
+OUTPUT INSERTED.[PlaceId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-03-17 15:53:32.345 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Place'.
+2025-03-17 15:53:32.373 +05:30 [INF] Executed action GuideWave.Controllers.PlaceController.Create (GuideWave) in 358.9748ms
+2025-03-17 15:53:32.376 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.PlaceController.Create (GuideWave)'
+2025-03-17 15:53:32.378 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Place - 201 null application/json; charset=utf-8 455.6521ms
+2025-03-17 15:53:48.528 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/api/Place - null null
+2025-03-17 15:53:48.535 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.PlaceController.GetAll (GuideWave)'
+2025-03-17 15:53:48.544 +05:30 [INF] Route matched with {action = "GetAll", controller = "Place"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GuideWave.DTO.Places.PlaceDto]]] GetAll() on controller GuideWave.Controllers.PlaceController (GuideWave).
+2025-03-17 15:53:48.621 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PlaceId], [p].[Availability], [p].[Description], [p].[ImageUrl], [p].[PlaceName]
+FROM [Places] AS [p]
+2025-03-17 15:53:48.687 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GuideWave.DTO.Places.PlaceDto, GuideWave, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-17 15:53:48.697 +05:30 [INF] Executed action GuideWave.Controllers.PlaceController.GetAll (GuideWave) in 150.9333ms
+2025-03-17 15:53:48.700 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.PlaceController.GetAll (GuideWave)'
+2025-03-17 15:53:48.702 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/api/Place - 200 null application/json; charset=utf-8 173.7597ms
+2025-03-17 15:54:15.707 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7015/api/Review - application/json 49
+2025-03-17 15:54:15.727 +05:30 [INF] CORS policy execution successful.
+2025-03-17 15:54:15.730 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.ReviewController.Create (GuideWave)'
+2025-03-17 15:54:15.741 +05:30 [INF] Route matched with {action = "Create", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GuideWave.DTO.Review.CreateReviewDto]] Create(GuideWave.DTO.Review.CreateReviewDto) on controller GuideWave.Controllers.ReviewController (GuideWave).
+2025-03-17 15:54:15.827 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Reviews] ([Feedback], [Ratings], [timestamp])
+OUTPUT INSERTED.[ReviewId]
+VALUES (@p0, @p1, @p2);
+2025-03-17 15:54:15.836 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'GuideWave.Models.Review'.
+2025-03-17 15:54:15.856 +05:30 [INF] Executed action GuideWave.Controllers.ReviewController.Create (GuideWave) in 110.2515ms
+2025-03-17 15:54:15.859 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.ReviewController.Create (GuideWave)'
+2025-03-17 15:54:15.861 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7015/api/Review - 201 null application/json; charset=utf-8 156.8479ms
+2025-03-17 15:54:25.923 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7015/api/Review - null null
+2025-03-17 15:54:25.936 +05:30 [INF] Executing endpoint 'GuideWave.Controllers.ReviewController.GetAll (GuideWave)'
+2025-03-17 15:54:25.943 +05:30 [INF] Route matched with {action = "GetAll", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GuideWave.DTO.Review.ReviewDto]]] GetAll() on controller GuideWave.Controllers.ReviewController (GuideWave).
+2025-03-17 15:54:25.966 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ReviewId], [r].[Feedback], [r].[Ratings], [r].[timestamp]
+FROM [Reviews] AS [r]
+2025-03-17 15:54:25.978 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GuideWave.DTO.Review.ReviewDto, GuideWave, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-17 15:54:25.984 +05:30 [INF] Executed action GuideWave.Controllers.ReviewController.GetAll (GuideWave) in 39.0023ms
+2025-03-17 15:54:25.986 +05:30 [INF] Executed endpoint 'GuideWave.Controllers.ReviewController.GetAll (GuideWave)'
+2025-03-17 15:54:25.987 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7015/api/Review - 200 null application/json; charset=utf-8 64.394ms

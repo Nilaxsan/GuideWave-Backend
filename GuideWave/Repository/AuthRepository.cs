@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
+using GuideWave.DTO.Tourists;
+using GuideWave.Models;
 using GuideWave.Repository.IRepository;
 using GuideWave.Services.EmailService;
+using Microsoft.AspNetCore.Identity;
 
 namespace GuideWave.Repository
 {
@@ -59,12 +62,54 @@ namespace GuideWave.Repository
                                     <h4>{otp}</h4>
                                   </p>
                                   <p>Best Regards,<br/>The Guide Wave Team</p>" ;            
-await _emailService.SendEmailAsync(tourist.Email, "Verify Your OTP", emailBody);
+                                await _emailService.SendEmailAsync(tourist.Email, "Verify Your OTP", emailBody);
             }
             else
             {
                 throw new Exception("Email not found");
             }
+        }
+        public async Task<bool> VerifyOtpAsync(string otp)
+        {
+            var email = _tempEmailForVerification; // Use the stored email
+            var guide =await _guidesRepository.GetByEmail(email);
+            var tourist =await _touristsRepository.GetByEmail(email);
+
+            if (guide != null && guide.Otp == otp)
+            {
+                return true;
+            }
+            else if (tourist != null && tourist.Otp == otp)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public async Task<bool> ResetPasswordAsync(string newPassword)
+        {
+            var email = _tempEmailForVerification; // Use the stored email
+            var guide =  await _guidesRepository.GetByEmail(email);
+            var tourist = await _touristsRepository.GetByEmail(email);
+
+            if (guide != null)
+            {
+                var passwordHasher = new PasswordHasher<Guide>();
+                guide.Password = passwordHasher.HashPassword(guide,newPassword);
+                guide.Otp = null; // Clear verification code after reset
+                await _guidesRepository.Update(guide);
+                return true;
+            }
+            else if (tourist != null)
+            {
+                var passwordHasher = new PasswordHasher<Tourists>();
+                tourist.Password = passwordHasher.HashPassword(tourist,newPassword);
+                tourist.Otp = null; // Clear verification code after reset
+                await _touristsRepository.Update(tourist);
+                return true;
+            }
+
+            return false; // If no user matched
         }
     }
 }

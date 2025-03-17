@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GuideWave")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+590bbac24818ffb89cace03d1ce73a32e4160997")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfb7a4966cf32c18c4881e433b21b7f7e810a609")]
 [assembly: System.Reflection.AssemblyProductAttribute("GuideWave")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GuideWave")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
